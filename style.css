@@ -1,0 +1,155 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.navbar li { display: inline; }
+
+.navbar {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  border: 2px solid #0066FF;
+  border-radius: 200px 20px;
+  /*width: 550px;*/
+  text-align: center;
+  background-color: #33ADFF;
+}
+.navbar a {
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+}
+.navbar a:hover {
+  border-radius: 20px 5px;
+  background-color: #0066FF;
+}
+
+
+
+
+.btn-cart {
+   color: rgb(40, 36, 231);
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  height: inherit;
+ 
+}
+
+.btn-cart a:hover{
+  border-radius: 20px 5px;
+  background-color: #0066FF;
+
+}
+
+.main-content{
+  margin-top: 42px; 
+}
+
+.products{
+  margin: 0 auto;
+  width: 1140px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  align-content: space-between;
+}
+
+.product-item {
+  width: 200px;
+  height: 320px;
+    left: 0;
+    top: 0;
+    background: rgba(252, 252, 252, 0.86);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0066FF;
+    margin-right: 10px;
+}
+
